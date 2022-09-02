@@ -8,6 +8,8 @@ resource "kubernetes_manifest" "kubemonkey_configmap" {
       start_hour = ${var.start_hour}
       end_hour = ${var.end_hour}
       blacklisted_namespaces = ${var.blacklisted_namespaces}
+      dry_run = ${var.dry_run}
+      time_zone = ${var.time_zone}
       EOT
     }
     "kind" = "ConfigMap"
